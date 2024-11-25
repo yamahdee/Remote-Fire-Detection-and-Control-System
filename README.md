@@ -7,21 +7,22 @@ This project is a remote fire detection and control system designed for early de
 
 **Features**
 
--Monitors environmental conditions for fire risks using:
+   -Monitors environmental conditions for fire risks using:
 
--DHT11: Temperature and humidity sensor.
+  -DHT11: Temperature and humidity sensor.
 
--MQ135: Gas detection sensor.
+  -MQ135: Gas detection sensor.
 
--MQ2: Smoke detection sensor.
+  -MQ2: Smoke detection sensor.
 
--Flame Sensor: Detects visible flames.
+  -Flame Sensor: Detects visible flames.
 
--Sends alerts and sensor data to a Firebase Realtime Database.
+  -Sends alerts and sensor data to a Firebase Realtime Database.
+  
+  -Controls sprinklers via SMS commands using a SIM800L module.
+  
+  -Provides a user-friendly interface via a Flutter mobile app for real-time monitoring.
 
--Controls sprinklers via SMS commands using a SIM800L module.
-
--Provides a user-friendly interface via a Flutter mobile app for real-time monitoring.
 
 
 **System Components**
@@ -44,18 +45,26 @@ This project is a remote fire detection and control system designed for early de
 **How It Works**
 
 -Sensors collect environmental data and send it to the ESP32 microcontroller.
+
 -The ESP32 updates the Firebase Realtime Database with sensor readings.
+
 -If thresholds are exceeded, the system:
+
 -Sends an SMS alert via the SIM800L module.
+
 -Activates sprinklers when commanded remotely via SMS.
+
 -Users can monitor the system and send control commands using the Flutter app.
 
-**#Technologies Used**
+
+**Technologies Used**
 
 -Hardware: ESP32, DHT11, MQ135, MQ2, Flame Sensor, SIM800L.
 
-**#Software:**
+**Software:**
 
 -Firebase Realtime Database for IoT backend.
+
 -Flutter framework for mobile app development.
+
 -Arduino IDE for programming the ESP32.
